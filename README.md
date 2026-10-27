@@ -2,7 +2,7 @@
 
 A custom 2-layer Printed Circuit Board (PCB) and hardware schematic design for an **ARM Cortex-M3 (STM32F103RET6)** development and evaluation board, designed in **Altium Designer**[cite: 1, 3, 6, 9]. 
 
-This project encompasses the complete hardware design lifecycle: component selection based on datasheet specifications, schematic capture, footprint verification, 2-layer PCB layout, and Design Rule Checking (DRC) for manufacturability[cite: 1, 3, 4, 8, 9].
+This project encompasses the complete hardware design lifecycle: component selection based on datasheet specifications, schematic capture, footprint verification, 2-layer PCB layout, and Design Rule Checking (DRC) for manufacturability.
 
 ---
 
@@ -14,8 +14,8 @@ This project encompasses the complete hardware design lifecycle: component selec
   * **LSE (Low-Speed External):** 32.768 kHz crystal for internal RTC.
 * **Power Supply Architecture:**
   * **12V DC Barrel Jack Input:** Stepped down to 5V using an **LM78M05** linear voltage regulator with input/output decoupling ($0.33\ \mu\text{F}$ and $0.1\ \mu\text{F}$).
-  * **5V USB Bus Power:** Direct 5V power supply option via the USB Type-C connector with ferrite bead EMI filtering[cite: 3, 4, 6].
-* **USB-to-UART Bridge:** Onboard **FT232RL** (SSOP-28) converter connected to a USB Type-C port, featuring TX/RX status indicator LEDs[cite: 3, 4, 5, 6].
+  * **5V USB Bus Power:** Direct 5V power supply option via the USB Type-C connector with ferrite bead EMI filtering.
+* **USB-to-UART Bridge:** Onboard **FT232RL** (SSOP-28) converter connected to a USB Type-C port, featuring TX/RX status indicator LEDs.
 * **User Peripherals & I/O:**
   * **3x User Push Buttons** (SMD $3\times6\times2.5\ \text{mm}$).
   * **1x Reset Push Button (NRST)** with $0.1\ \mu\text{F}$ parasitic reset protection capacitor and pull-up network.
@@ -30,12 +30,12 @@ This project encompasses the complete hardware design lifecycle: component selec
 
 ## 📐 PCB Layout & Design Considerations
 
-The board was laid out on a **2-layer PCB** constrained within a compact **90 mm × 90 mm** form factor, adhering to standard fabrication capabilities[cite: 1, 8]:
+The board was laid out on a **2-layer PCB** constrained within a compact **90 mm × 90 mm** form factor, adhering to standard fabrication capabilities:
 
-1. **Decoupling & Signal Integrity:** Bypass capacitors ($100\ \text{nF}$ and bulk capacitors) are placed as close as possible to the MCU $V_{DD}$ pins[cite: 1, 3, 4, 8]. Signals are routed to pass through larger bulk capacitors first, followed by smaller high-frequency decoupling capacitors right at the IC pins[cite: 1, 8].
-2. **Power & Ground Planes:** Dual-layer copper polygon pours (Top and Bottom layers) are utilized for solid Ground (`GND`) distribution to minimize return path impedance and resolve isolated ground islands[cite: 1].
-3. **High-Current Copper Zones:** 12V power nets are routed using wider copper pours/traces to safely handle current requirements with minimal voltage drop and thermal rise[cite: 1, 8].
-4. **Mechanical Mounting:** Includes 4 corner mounting holes for enclosure integration[cite: 8].
+1. **Decoupling & Signal Integrity:** Bypass capacitors ($100\ \text{nF}$ and bulk capacitors) are placed as close as possible to the MCU $V_{DD}$ pins. Signals are routed to pass through larger bulk capacitors first, followed by smaller high-frequency decoupling capacitors right at the IC pins.
+2. **Power & Ground Planes:** Dual-layer copper polygon pours (Top and Bottom layers) are utilized for solid Ground (`GND`) distribution to minimize return path impedance and resolve isolated ground islands.
+3. **High-Current Copper Zones:** 12V power nets are routed using wider copper pours/traces to safely handle current requirements with minimal voltage drop and thermal rise.
+4. **Mechanical Mounting:** Includes 4 corner mounting holes for enclosure integration.
 
 ---
 
@@ -43,18 +43,18 @@ The board was laid out on a **2-layer PCB** constrained within a compact **90 mm
 
 | Component | Part Number / Value | Package | Qty | Description |
 | :--- | :--- | :--- | :---: | :--- |
-| **MCU** | `STM32F103RET6` | LQFP-64 | 1 | 32-bit ARM Cortex-M3 Microcontroller[cite: 3, 6] |
-| **USB-UART IC** | `FT232RL` | SSOP-28 | 1 | USB to Serial UART Interface[cite: 3, 4, 6] |
-| **Voltage Regulator** | `LM78M05` | SMD (TO-252) | 1 | 5V Positive Voltage Regulator[cite: 3, 4] |
-| **Transistor** | `BC817` | SOT-23 (SMD) | 3 | NPN Bipolar Transistor (Buzzer/LED Driver)[cite: 3, 5, 6] |
-| **Crystal (HSE)** | `8 MHz` | HC-49US | 1 | High-Speed External Oscillator[cite: 3, 4] |
-| **Buzzer** | `AI-1223-TWT-5V-R` | SMD | 1 | 5V Magnetic Audio Transducer[cite: 3, 6] |
-| **USB Connector** | `USB Type-C (C951)` | SMD | 1 | Power and Serial Data Connector[cite: 3, 4, 6] |
-| **Push Buttons** | `Tactile Switch` | SMD 3×6×2.5mm | 4 | Reset, Boot, and User Inputs[cite: 3, 5, 6] |
-| **LEDs** | `SMD LED` | 1210 | 5 | Power, TX/RX, and User I/O Indicators[cite: 3, 5, 6] |
-| **Capacitors** | `18pF, 100nF, 10µF, 47µF` | 1206 / 0805 | 13 | Oscillator Load, Filtering & Decoupling[cite: 3, 4, 8] |
-| **Resistors** | `10Ω, 4.7kΩ, 680Ω, 270Ω, 200kΩ`| 0805 | 20 | Current Limiting, Pull-up/Pull-down[cite: 3, 5] |
-| **Pin Headers** | `2x40 Male Header` | SMD | 1 | GPIO Breakout & Expansion[cite: 3, 6] |
+| **MCU** | `STM32F103RET6` | LQFP-64 | 1 | 32-bit ARM Cortex-M3 Microcontroller |
+| **USB-UART IC** | `FT232RL` | SSOP-28 | 1 | USB to Serial UART Interface |
+| **Voltage Regulator** | `LM78M05` | SMD (TO-252) | 1 | 5V Positive Voltage Regulator |
+| **Transistor** | `BC817` | SOT-23 (SMD) | 3 | NPN Bipolar Transistor (Buzzer/LED Driver) |
+| **Crystal (HSE)** | `8 MHz` | HC-49US | 1 | High-Speed External Oscillator |
+| **Buzzer** | `AI-1223-TWT-5V-R` | SMD | 1 | 5V Magnetic Audio Transducer |
+| **USB Connector** | `USB Type-C (C951)` | SMD | 1 | Power and Serial Data Connector |
+| **Push Buttons** | `Tactile Switch` | SMD 3×6×2.5mm | 4 | Reset, Boot, and User Inputs |
+| **LEDs** | `SMD LED` | 1210 | 5 | Power, TX/RX, and User I/O Indicators |
+| **Capacitors** | `18pF, 100nF, 10µF, 47µF` | 1206 / 0805 | 13 | Oscillator Load, Filtering & Decoupling |
+| **Resistors** | `10Ω, 4.7kΩ, 680Ω, 270Ω, 200kΩ`| 0805 | 20 | Current Limiting, Pull-up/Pull-down |
+| **Pin Headers** | `2x40 Male Header` | SMD | 1 | GPIO Breakout & Expansion |
 
 ---
 
