@@ -1,6 +1,6 @@
 # STM32F103RET6 Evaluation Board - Hardware & PCB Design
 
-A custom 2-layer Printed Circuit Board (PCB) and hardware schematic design for an **ARM Cortex-M3 (STM32F103RET6)** development and evaluation board, designed in **Altium Designer**[cite: 1, 3, 6, 9]. 
+A custom 2-layer Printed Circuit Board (PCB) and hardware schematic design for an **ARM Cortex-M3 (STM32F103RET6)** development and evaluation board, designed in **Altium Designer**. 
 
 This project encompasses the complete hardware design lifecycle: component selection based on datasheet specifications, schematic capture, footprint verification, 2-layer PCB layout, and Design Rule Checking (DRC) for manufacturability.
 
@@ -13,18 +13,18 @@ This project encompasses the complete hardware design lifecycle: component selec
   * **HSE (High-Speed External):** 8 MHz HC-49US crystal oscillator paired with 18 pF ceramic load capacitors.
   * **LSE (Low-Speed External):** 32.768 kHz crystal for internal RTC.
 * **Power Supply Architecture:**
-  * **12V DC Barrel Jack Input:** Stepped down to 5V using an **LM78M05** linear voltage regulator with input/output decoupling ($0.33\ \mu\text{F}$ and $0.1\ \mu\text{F}$).
+  * **12V DC Barrel Jack Input:** Stepped down to 5V using an **LM78M05** linear voltage regulator with input/output decoupling (0.33 µF and 0.1 µF).
   * **5V USB Bus Power:** Direct 5V power supply option via the USB Type-C connector with ferrite bead EMI filtering.
 * **USB-to-UART Bridge:** Onboard **FT232RL** (SSOP-28) converter connected to a USB Type-C port, featuring TX/RX status indicator LEDs.
 * **User Peripherals & I/O:**
-  * **3x User Push Buttons** (SMD $3\times6\times2.5\ \text{mm}$).
-  * **1x Reset Push Button (NRST)** with $0.1\ \mu\text{F}$ parasitic reset protection capacitor and pull-up network.
+  * **3x User Push Buttons** (SMD 3×6×2.5 mm).
+  * **1x Reset Push Button (NRST)** with 0.1 µF parasitic reset protection capacitor and pull-up network.
   * **Boot Mode Selection Circuit** (Switch-controlled BOOT pin configuration).
   * **5V Piezo Buzzer** (`AI-1223-TWT-5V-R`) driven by a **BC817** NPN SMD transistor.
   * **SMD 1210 User & Status LEDs** with transistor driver and current-limiting resistors.
 * **Expansion & Debugging:**
   * Dedicated **ST-LINK (SWD)** programming header.
-  * Full breakout of unused GPIO pins to standard $2\times40$ SMD Male Pin Headers.
+  * Full breakout of unused GPIO pins to standard 2×40 SMD Male Pin Headers.
 
 ---
 
@@ -32,7 +32,7 @@ This project encompasses the complete hardware design lifecycle: component selec
 
 The board was laid out on a **2-layer PCB** constrained within a compact **90 mm × 90 mm** form factor, adhering to standard fabrication capabilities:
 
-1. **Decoupling & Signal Integrity:** Bypass capacitors ($100\ \text{nF}$ and bulk capacitors) are placed as close as possible to the MCU $V_{DD}$ pins. Signals are routed to pass through larger bulk capacitors first, followed by smaller high-frequency decoupling capacitors right at the IC pins.
+1. **Decoupling & Signal Integrity:** Bypass capacitors (100 nF and bulk capacitors) are placed as close as possible to the MCU VDD pins. Signals are routed to pass through larger bulk capacitors first, followed by smaller high-frequency decoupling capacitors right at the IC pins.
 2. **Power & Ground Planes:** Dual-layer copper polygon pours (Top and Bottom layers) are utilized for solid Ground (`GND`) distribution to minimize return path impedance and resolve isolated ground islands.
 3. **High-Current Copper Zones:** 12V power nets are routed using wider copper pours/traces to safely handle current requirements with minimal voltage drop and thermal rise.
 4. **Mechanical Mounting:** Includes 4 corner mounting holes for enclosure integration.
