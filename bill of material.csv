@@ -1,0 +1,18 @@
+Comment,Description,Designator,Footprint,LibRef,Quantity
+
+"Capacitor C SMD 1206","Capacitor C SMD 1206","C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16","C1206","Capacitor C SMD 1206","16"
+"LED SMD 1210","LED SMD 1210","D1, D2, D3, D4","LED SMD 1210 (Yellow)","LED SMD 1210","4"
+"Inductor SMD NC 0806","Inductor SMD NC 0806","FB1, FB2, FB3","L0806","Inductor SMD NC 0806","3"
+"AI-1223-TWT-5V-R","INDICATOR 5VDC 85DB 2300HZ","LS1","XDCR_AI-1223-TWT-5V-R","AI-1223-TWT-5V-R","1"
+"USB","USB Connector-B Type","p2","USB2.5-2H4F","USB","1"
+"Header 34","Header, 34-Pin","P1","HDR 1X34","Header 34","1"
+"Header 5","Header, 5-Pin","P2","HDR 1X5","Header 5","1"
+"SW_PB2","2 Pin Push Button Switch","PB1, PB2, PB4, PB?","SMD_ALPS_SKQMBBE010","SW_PB2","4"
+"BC817 NPN","BJT, NPN, 45v, 0.5A, SMD, SOT23","Q1, Q2, Q3","SOT-23","BC817 NPN","3"
+"Resistor SMD 0805","Resistor SMD 0805","R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14","SMD-0805-RES","Resistor SMD 0805","14"
+"SW SPDT 1","Toggle SPDT Switch with Body Hole","SW-spst1","SWSLIDT_SPST_S_19X11","SW SPDT 1","1"
+"INTERFACE-FT232RL(SSOP28)","USB-мост, интерфейс USB к UART USB 2.0 UART 28-SSOP","U1","SSOP28-0.65-10.2X5.2MM","INTERFACE-FT232RL(SSOP28)","1"
+"STM32F103RET6","ARM Cortex-M3 32-bit MCU, 512 KB Flash, 64 KB Internal RAM, 51 I/Os, 64-pin LQFP, -40 to 85 degC, Tray","U2","STM-LQFP64_N","STM32F103RET6","1"
+"LM78M05CDT/NOPB","500-mA, 35-V, linear voltage regulator for 5 V 3-TO-252 -40 to 125","VR1","TO228P991X255-3N","LM78M05CDT/NOPB","1"
+"8MHz","Crystal Oscillator","Y1","HC-49U","ECS-44-20-1","1"
+"32.768kHz","Crystal Oscillator","Y2","HC-49U","ECS-44-20-1","1"
