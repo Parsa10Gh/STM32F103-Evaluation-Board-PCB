@@ -13,6 +13,18 @@ This project encompasses the complete hardware design lifecycle: component selec
 
 This repository documents the electronic design work completed as part of an undergraduate engineering course. The physical board has not been fabricated or experimentally validated.
 
+## Schematic
+
+The schematic illustrates the STM32F103RET6 microcontroller and its supporting circuits, including power regulation, clock generation, USB-to-serial communication, boot, and reset circuitry.
+
+![STM32F103RET6 schematic](Images/Schematic.png)
+
+## PCB Layout
+
+The PCB layout shows component placement, copper routing, vias, and the board's two-layer design.
+
+![PCB layout](Images/PCB_2D_Layout.png)
+
 ## 🔧 Key Hardware Features
 
 * **Microcontroller:** STMicroelectronics **STM32F103RET6** (ARM 32-bit Cortex-M3 CPU, LQFP-64 package).
