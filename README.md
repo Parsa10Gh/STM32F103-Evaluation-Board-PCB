@@ -17,13 +17,13 @@ This repository documents the electronic design work completed as part of an und
 
 The schematic illustrates the STM32F103RET6 microcontroller and its supporting circuits, including power regulation, clock generation, USB-to-serial communication, boot-mode selection, and reset circuitry.
 
-<img src="Images/Schematic.png" width="600">
+<img src="Images/Schematic.png" width="800">
 
 ## PCB Layout
 
 The PCB layout shows component placement, copper routing, vias, and the two-layer board design.
 
-![PCB layout](Images/PCB_2D_Layout.png)
+<img src="Images/PCB_2D_Layout.png" width="800">
 
 ## Key Hardware Features
 
