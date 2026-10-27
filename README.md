@@ -8,23 +8,23 @@ This project encompasses the complete hardware design lifecycle: component selec
 
 ## 🔧 Key Hardware Features
 
-* **Microcontroller:** STMicroelectronics **STM32F103RET6** (ARM 32-bit Cortex-M3 CPU, LQFP-64 package)[cite: 3, 6].
+* **Microcontroller:** STMicroelectronics **STM32F103RET6** (ARM 32-bit Cortex-M3 CPU, LQFP-64 package).
 * **Clock System:**
-  * **HSE (High-Speed External):** 8 MHz HC-49US crystal oscillator paired with 18 pF ceramic load capacitors[cite: 3, 4].
-  * **LSE (Low-Speed External):** 32.768 kHz crystal for internal RTC[cite: 4].
+  * **HSE (High-Speed External):** 8 MHz HC-49US crystal oscillator paired with 18 pF ceramic load capacitors.
+  * **LSE (Low-Speed External):** 32.768 kHz crystal for internal RTC.
 * **Power Supply Architecture:**
-  * **12V DC Barrel Jack Input:** Stepped down to 5V using an **LM78M05** linear voltage regulator with input/output decoupling ($0.33\ \mu\text{F}$ and $0.1\ \mu\text{F}$)[cite: 4, 6].
+  * **12V DC Barrel Jack Input:** Stepped down to 5V using an **LM78M05** linear voltage regulator with input/output decoupling ($0.33\ \mu\text{F}$ and $0.1\ \mu\text{F}$).
   * **5V USB Bus Power:** Direct 5V power supply option via the USB Type-C connector with ferrite bead EMI filtering[cite: 3, 4, 6].
 * **USB-to-UART Bridge:** Onboard **FT232RL** (SSOP-28) converter connected to a USB Type-C port, featuring TX/RX status indicator LEDs[cite: 3, 4, 5, 6].
 * **User Peripherals & I/O:**
-  * **3x User Push Buttons** (SMD $3\times6\times2.5\ \text{mm}$)[cite: 3, 6].
-  * **1x Reset Push Button (NRST)** with $0.1\ \mu\text{F}$ parasitic reset protection capacitor and pull-up network[cite: 3, 5].
-  * **Boot Mode Selection Circuit** (Switch-controlled BOOT pin configuration)[cite: 5, 6].
-  * **5V Piezo Buzzer** (`AI-1223-TWT-5V-R`) driven by a **BC817** NPN SMD transistor[cite: 3, 5, 6].
-  * **SMD 1210 User & Status LEDs** with transistor driver and current-limiting resistors[cite: 3, 5, 6].
+  * **3x User Push Buttons** (SMD $3\times6\times2.5\ \text{mm}$).
+  * **1x Reset Push Button (NRST)** with $0.1\ \mu\text{F}$ parasitic reset protection capacitor and pull-up network.
+  * **Boot Mode Selection Circuit** (Switch-controlled BOOT pin configuration).
+  * **5V Piezo Buzzer** (`AI-1223-TWT-5V-R`) driven by a **BC817** NPN SMD transistor.
+  * **SMD 1210 User & Status LEDs** with transistor driver and current-limiting resistors.
 * **Expansion & Debugging:**
-  * Dedicated **ST-LINK (SWD)** programming header[cite: 6].
-  * Full breakout of unused GPIO pins to standard $2\times40$ SMD Male Pin Headers[cite: 3, 6].
+  * Dedicated **ST-LINK (SWD)** programming header.
+  * Full breakout of unused GPIO pins to standard $2\times40$ SMD Male Pin Headers.
 
 ---
 
